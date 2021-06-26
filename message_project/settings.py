@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8(1il+w3ekc&@p8m2o#r2_9@ls$y(sul7mr*7(0_$=otd4=+$c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['crabsnilchat.herokuapp.com']
 
