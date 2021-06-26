@@ -1,2 +1,2 @@
-web: daphne message_project.asgi:application
+web: daphne message_project.asgi:application --port $PORT --bind 0.0.0.0 v2
 worker: python manage.py runworker -v2
