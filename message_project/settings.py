@@ -143,7 +143,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'crabsnil_chat.User'
 
 # cors origins
-CORS_ALLOWED_ORIGINS = ['http://127.0.0.1:5501', 'https://quirky-euler-b3067a.netlify.app']
+CORS_ALLOWED_ORIGINS = ['https://yourchat.netlify.app']
 
 # rest framework-simple jwt
 REST_FRAMEWORK = {
