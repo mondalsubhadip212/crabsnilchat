@@ -12,7 +12,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 # import django_heroku
 # import dj_database_url
 from pathlib import Path
+import os
+import django_heroku
 from datetime import timedelta
+
 # import channels_redis
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -87,11 +90,14 @@ ASGI_APPLICATION = "message_project.asgi.application"
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#     }
+# }
+if 'DATABASE_URL' in os.environ:
+    import dj_database_url
+    DATABASES = {'default': dj_database_url.config()}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
